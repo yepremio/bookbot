@@ -3,7 +3,20 @@ def main():
     text = get_book_text(book_path)
     num_of_words = word_count(text)
     print(f"{num_of_words} of words found in the document")
+    char_count = count_char(text) 
+    print(char_count)
+
+def count_char(text):
+    char_found = {}
+    lower_case_text = text.lower()
     
+    for char in lower_case_text:
+        char_found[char] = 0
+    for chars in lower_case_text:
+        if chars in char_found:
+            char_found[chars] += 1
+
+    return char_found
 
 
 def get_book_text(path):
