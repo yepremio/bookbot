@@ -2,11 +2,11 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     num_of_words = word_count(text)
-    print(f"--- Begin report of {book_path} ---")
-    print(f"{num_of_words} words found in the document")
     char_count = count_char(text) 
     sorted_list = report(char_count)
     
+    print(f"--- Begin report of {book_path} ---")
+    print(f"{num_of_words} words found in the document")
     print()
 
     for item in sorted_list:
@@ -14,7 +14,6 @@ def main():
             print(f"The {item['char']} character was found {item['num']} times")
 
     print(f"--- End report ---")
-
 
 def sort_on(item):
     return item["num"]
