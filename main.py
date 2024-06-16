@@ -5,6 +5,7 @@ def main():
     char_count = count_char(text) 
     sorted_list = report(char_count)
     
+    # Print report below
     print(f"--- Begin report of {book_path} ---")
     print(f"{num_of_words} words found in the document")
     print()
@@ -41,7 +42,6 @@ def count_char(text):
             char_found[chars] = 1
 
     return char_found
-
 
 def get_book_text(path):
     with open(path) as f:
